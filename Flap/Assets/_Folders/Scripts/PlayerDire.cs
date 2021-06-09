@@ -14,8 +14,6 @@ public class PlayerDire : MonoBehaviour
     {
         if(col.CompareTag("Pipe"))
             print("Player died");
-        else
-            print("poop");
     }
     // Update is called once per frame
     void Update()

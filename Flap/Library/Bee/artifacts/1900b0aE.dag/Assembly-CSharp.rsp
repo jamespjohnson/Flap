@@ -325,6 +325,7 @@
 "Assets/_Folders/Scripts/CubeAnimation.cs"
 "Assets/_Folders/Scripts/HorizontalTween.cs"
 "Assets/_Folders/Scripts/PlayerDire.cs"
+"Assets/_Folders/Scripts/ScoreCounter.cs"
 -langversion:8.0
 
 /deterministic
