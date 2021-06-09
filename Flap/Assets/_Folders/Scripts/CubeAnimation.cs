@@ -5,18 +5,24 @@ using DG.Tweening;
 
 public class CubeAnimation : MonoBehaviour
 {
-    void fall()
+    float gravity = -6.0f;
+    void Fall()
     {
-        transform.DOMoveY(transform.localPosition.y - 1.5f, 1f, false).SetAutoKill(true);
+        Vector3 pos = transform.localPosition;
+        pos.y += gravity * Time.deltaTime;
+        transform.localPosition = pos;
     }
-    void jump()
+
+    void Jump()
     {
-       transform.DOMoveY(transform.localPosition.y + 10f, 1f, false).SetAutoKill(true);
+        transform.DOKill(false);
+        transform.DOMoveY(transform.localPosition.y + 1.5f, 0.15f).SetEase(Ease.OutBack);
     }
+
     void Update()
     {
-        if(Input.GetKey(KeyCode.Space))
-            jump();
-        fall();
+        if(Input.GetKeyDown(KeyCode.Space))
+            Jump();
+        Fall();
     }
 }
