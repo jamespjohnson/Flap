@@ -15,7 +15,7 @@ public class ScoreCounter : MonoBehaviour
         if(col.CompareTag("ScoreTrigger"))
         {
             score++;
-            print(score);
+            //print(score);
         }
     }
     // Update is called once per frame
